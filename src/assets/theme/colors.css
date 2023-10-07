@@ -4,10 +4,10 @@
   --color-primary: #1c4980;
   --color-primary-light: #8da4bf;
   --border-color-primary: #dadce0;
-  --color-royal-blue: #3079E1;
-  --color-accent-pink:  #E9407A,
-  --color-pastel-neon-blue:  #6548ee,
-
+  --color-royal-blue: #3079e1;
+  --color-accent-pink: #e9407a;
+  --color-pastel-neon-blue: #6548ee;
+  --backgound-primary: #f6f8fa;
 }
 html {
   /* background: var(--color-surface);
@@ -15,13 +15,15 @@ html {
   color: var(--color-primary);
 }
 
-a, p, span {
+a,
+p,
+span {
   font-size: 12px;
   font-style: normal;
   line-height: normal;
   font-weight: 500;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }

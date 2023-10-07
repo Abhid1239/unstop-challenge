@@ -1,6 +1,61 @@
-.asses_overview {
+.my-asses__overview {
   display: flex;
   flex-direction: column;
-  gap: 15;
+  gap: 15px;
   margin: 20px 15px;
+}
+
+.my-asses__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.my-asses__text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.my-asses__features {
+  display: flex;
+}
+
+.my-asses__features-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-asses__new-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: var(--backgound-primary);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+}
+.my-asses__new-add {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.my-asses__new-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.my-asses__new-text,
+.my-asses__new-info {
+  text-align: center;
 }
