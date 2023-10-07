@@ -1,9 +1,9 @@
 import './assets/theme/colors.css'
-import AssesmentOverview from "./components/AssesmentOverview/AssesmentOverview";
+import AssesmentPage from './pages/AssesmentPage/AssesmentPage';
 function App() {
   return (
     <div className="App">
-      <AssesmentOverview />
+      <AssesmentPage />
     </div>
   );
 }

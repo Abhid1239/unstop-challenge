@@ -3,11 +3,14 @@
   --color-solid: black;
   --color-primary: #1c4980;
   --color-primary-light: #8da4bf;
+  --color-seconday: #0073e6;
   --border-color-primary: #dadce0;
+
   --color-royal-blue: #3079e1;
   --color-accent-pink: #e9407a;
   --color-pastel-neon-blue: #6548ee;
-  --backgound-primary: #f6f8fa;
+  --background-primary: #f6f8fa;
+  --background-secondary: #f2f8fe;
 }
 html {
   /* background: var(--color-surface);
@@ -17,6 +20,7 @@ html {
 
 a,
 p,
+h1,
 span {
   font-size: 12px;
   font-style: normal;
