@@ -1,0 +1,147 @@
+.card {
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 20px;
+}
+
+.card__info,
+.card__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__info {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border-color-primary);
+  margin-bottom: 10px;
+}
+
+.card__lhs,
+.card__rhs {
+  display: flex;
+  justify-content: flex-start;
+}
+.card__rhs {
+  align-items: center;
+}
+.card__job-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.card__asses-name {
+  color: var(--color-primary);
+  padding: 4px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card__asses-type {
+  line-height: 1.4;
+  padding-top: 2px;
+}
+
+.card__clock-icon {
+  margin: 0 4px;
+}
+
+.card__asses-date {
+  color: var(--color-primary-light);
+  padding-left: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.card__tooltip {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
+
+.card__det-info {
+  margin-right: 10px;
+  line-height: 1.4;
+  font-size: 10px;
+}
+
+.card__det-count {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+}
+
+.card__share {
+  height: 100%;
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+  padding: 2px 8px 2px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-right: 6px;
+}
+
+/* .card__people-info:first-child {
+  transform: translateX(-14px);
+} */
+
+.card__people_wrapper {
+  display: flex;
+  position: relative;
+}
+.card__people-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  color: white;
+  background-color: var(--color-royal-blue);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card__people-count {
+  text-align: center;
+  font-weight: 600;
+  padding-left: 4px;
+}
+
+@media screen and (width >= 600px) {
+  .card {
+    padding: 16px;
+  }
+
+  .card__info {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  .card__lhs--desk {
+    flex-direction: column;
+  }
+
+  .card__asses-name {
+    padding: 10px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .card__asses-date {
+    align-items: flex-end;
+  }
+
+  .card__clock-icon {
+    margin-left: 6px;
+  }
+}

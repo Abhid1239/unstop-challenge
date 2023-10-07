@@ -1,0 +1,6 @@
+.asses_overview {
+  display: flex;
+  flex-direction: column;
+  gap: 15;
+  margin: 20px 15px;
+}
