@@ -29,3 +29,18 @@ Launches the test runner in the interactive watch mode. See the section about [r
 Builds the app for production to the `build` folder.
 
 It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+
+
+
+
+Build Project Way:
+
+Added CSS Resets from : http://web.simmons.edu/~grovesd/comm244/notes/week4/css-reset#:~:text=A%20CSS%20Reset%20style%20sheet,be%20similar%2C%20but%20not%20exact.
+
+Added a css file in public and refernce it in index.html
+
+Using plain CSS since nesting can be done now need to try out variable naming in a css project
+
+Folder Structure Pattern used Intermidiate: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
+
+Setup Done
