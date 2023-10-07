@@ -59,3 +59,10 @@
 .my-asses__new-info {
   text-align: center;
 }
+
+@media screen and (width >= 600px) {
+  .my-asses__overview {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
