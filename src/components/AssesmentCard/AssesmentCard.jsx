@@ -105,7 +105,7 @@ const PeopleDetails = ({ people = [], peopleCount = 0 }) => {
 
 }
 
-function AssesmentCard({ assesmentData, key = "abcx" }) {
+function AssesmentCard({ assesmentData, key = "abcx", isDesktop }) {
     const {
         name,
         type,
@@ -116,7 +116,6 @@ function AssesmentCard({ assesmentData, key = "abcx" }) {
         attemptedPeople,
         attemptedPeopleCount,
     } = assesmentData;
-    const isDesktop = true;
     return (
         <div className='card' key={key}>
             <div className='card__info'>

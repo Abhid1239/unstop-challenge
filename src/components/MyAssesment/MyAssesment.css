@@ -1,0 +1,56 @@
+.my-asses__overview {
+  padding: 20px 15px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.my-asses__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-asses__text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.my-asses__features {
+  display: flex;
+}
+
+.my-asses__features-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-asses__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (width >= 900px) {
+  .my-asses__overview {
+    overflow: auto;
+  }
+  .my-asses__text {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .my-asses__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (width >= 960px) {
+  .my-asses__info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

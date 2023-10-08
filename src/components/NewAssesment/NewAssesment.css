@@ -1,0 +1,32 @@
+.new-asses__new-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: var(--background-primary);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+  min-width: 300px;
+}
+.new-asses__new-add {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.new-asses__new-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.new-asses__new-text,
+.new-asses__new-info {
+  text-align: center;
+}

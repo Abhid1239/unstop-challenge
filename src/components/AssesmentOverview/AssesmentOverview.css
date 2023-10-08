@@ -1,69 +1,81 @@
-.my-asses__overview {
+.overview__wrapper {
+  border: 1px solid var(--border-color-primary);
+  border-radius: 12px;
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+  overflow: hidden;
+}
+.overview__container {
+  padding: 10px 14px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 20px 15px;
-  overflow: scroll;
+  gap: 10px;
+  flex: 1 0 auto;
 }
 
-.my-asses__header {
+.overview__first-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+  gap: 1px;
+  flex: 1 0 auto;
+  border-bottom: 1px solid #dadce0;
 }
 
-.my-asses__text {
+.overview__total-wrapper {
+  border-right: 1px solid #dadce0;
+}
+
+.overview__total-proposed {
+  border-left: 1px solid #dadce0;
+}
+
+.overview__candidates {
+  border: solid #dadce0;
+  border-width: 1px 0;
+}
+
+.overview__cand-score {
+  border-top: 1px solid #dadce0;
+}
+.overview__details {
+  display: flex;
+  gap: 10px;
+}
+
+.overview__heading-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.overview__count {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   font-weight: 600;
 }
-.my-asses__features {
-  display: flex;
+
+.overview__info-text,
+.overview__recent {
+  font-size: 10px;
+  line-height: 1.4;
 }
 
-.my-asses__features-icon {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.overview__recent {
+  color: var(--status-success);
+  padding-left: 4px;
 }
 
-.my-asses__new-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 30px;
-  background-color: var(--background-primary);
-  border: 1px solid var(--border-color-primary);
-  border-radius: 12px;
-}
-.my-asses__new-add {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  margin-bottom: 10px;
-}
+@media screen and (width >= 900px) {
+  .overview__first-section {
+    display: block;
+    border: none;
+  }
 
-.my-asses__new-text {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+  .overview__candidates {
+    border-width: 0 1px;
+  }
 
-.my-asses__new-text,
-.my-asses__new-info {
-  text-align: center;
-}
-
-@media screen and (width >= 600px) {
-  .my-asses__overview {
+  .overview__wrapper {
     flex-direction: row;
-    flex-wrap: wrap;
   }
 }

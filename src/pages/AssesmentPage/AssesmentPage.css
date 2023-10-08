@@ -62,3 +62,30 @@
   color: #0073e6;
   border-bottom-color: #0073e6;
 }
+
+@media screen and (width >= 900px) {
+  .asses-page__header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex: 1 0 auto;
+    border-bottom: 1px solid var(--border-color-secondary);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0px 4px 12px 0px var(--border-color-secondary);
+  }
+  .asses-page__heading {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .asses-page__tabs {
+    margin-left: 20px;
+  }
+
+  .asses-page__my-asses,
+  .asses-page__unstop-asses {
+    height: 70px;
+  }
+}
