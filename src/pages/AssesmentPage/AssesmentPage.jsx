@@ -19,12 +19,11 @@ function AssesmentPage(props) {
                 </div>
             </div>
             <div className="asses-page__tabs">
-                <div className="asses-page__my-asses active">My Assesment</div>
-                <div className="asses-page__unstop-asses">Unstop Assement</div>
+                <div className="asses-page__my-asses active">My Assesments</div>
+                <div className="asses-page__unstop-asses">Unstop Assements</div>
             </div>
-            <div className="asses-page__my-asses_detail">
-                <AssesmentOverview />
-            </div>
+            <AssesmentOverview />
+
         </div>
     )
 }

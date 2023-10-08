@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin: 20px 15px;
+  padding: 20px 15px;
+  overflow: scroll;
 }
 
 .my-asses__header {
