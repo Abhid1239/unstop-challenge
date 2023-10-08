@@ -3,15 +3,20 @@
   --color-solid: black;
   --color-primary: #1c4980;
   --color-primary-light: #8da4bf;
-  --color-seconday: #0073e6;
+  --color-secondary: #0073e6;
+  --color-secondary-light: #e5f1fc;
   --status-success: #05c165;
+  --staus-important: #d63500;
+  --staus-important-light: #fbebea;
   --border-color-primary: #dadce0;
   --border-color-secondary: #dde5ea;
+  --border-color-tertiary: #bacbd5;
   --color-royal-blue: #3079e1;
   --color-accent-pink: #e9407a;
   --color-pastel-neon-blue: #6548ee;
   --background-primary: #f6f8fa;
   --background-secondary: #f2f8fe;
+  --background-shadow: #1e1d1d9c;
 }
 html {
   /* background: var(--color-surface);

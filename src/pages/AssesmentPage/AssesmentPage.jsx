@@ -5,11 +5,15 @@ import './AssesmentPage.css';
 import PropTypes from 'prop-types'
 import { ReactComponent as NavIcon } from './../../assets/svg/nav.svg'
 import { ReactComponent as DesktopIcon } from './../../assets/svg/desktop.svg'
+import Navigation from '../../components/Navigation/Navigation';
 
 
 function AssesmentPage({ isDesktop }) {
     return (
         <div className='assesment__page'>
+            <div className='asses-page__nav-section'>
+                <Navigation />
+            </div>
             <div className="asses-page__header">
                 <div className="asses-page__nav">
                     <NavIcon />
