@@ -125,6 +125,7 @@
 @media screen and (width >= 900px) {
   .card {
     padding: 16px;
+    min-width: auto;
   }
 
   .card__info {

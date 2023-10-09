@@ -8,14 +8,14 @@ import { ReactComponent as QuizIcon } from "./../../assets/svg/quiz.svg";
 import { ReactComponent as CrossIcon } from "./../../assets/svg/cross.svg";
 
 
-function Navigation(props) {
+function Navigation({ isDesktop }) {
     return (
         <div className="nav-wrapper__shadow">
             <div className="nav__wrapper">
-                <div className="nav__control">
+                {!isDesktop && <div className="nav__control">
                     <p className="nav__menu-text">Menu </p>
                     <CrossIcon />
-                </div>
+                </div>}
                 <div className="nav__sec-one">
                     <div className="nav__section-wrapper">
                         <DashboardIcon />
@@ -31,12 +31,15 @@ function Navigation(props) {
                     </div>
                 </div>
                 <div className="nav__sec-two">
+                    {isDesktop && <div className="nav__section-tag">
+                        <p className="nav__tag-text">Admin</p>
+                    </div>}
                     <div className="nav__section-wrapper nav__section-wrapper--tag">
                         <RoundsIcon />
                         <p className="nav__section-text">Round Status</p>
-                        <div className="nav__section-tag">
+                        {!isDesktop && <div className="nav__section-tag">
                             <p className="nav__tag-text">Admin</p>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </div>

@@ -68,7 +68,7 @@ const defaultProps = {
     }
 }
 
-const PeopleDetails = ({ people = [], peopleCount = 0 }) => {
+const PeopleDetails = ({ people = [], peopleCount = 0, isDesktop }) => {
     const peopleInfo = [];
     let totalLength = Math.min(people.length, 3);
     const peopleCards = [];
@@ -97,7 +97,7 @@ const PeopleDetails = ({ people = [], peopleCount = 0 }) => {
         {peopleCards}
     </div>)
     if (peopleCount > 3) {
-        peopleInfo.push(<p className='card__people-count'>
+        !isDesktop && peopleInfo.push(<p className='card__people-count'>
             +{peopleCount - 3}
         </p>)
     }
@@ -154,7 +154,7 @@ function AssesmentCard({ assesmentData, key = "abcx", isDesktop }) {
                         <LinkIcon />
                         Share
                     </a>
-                    {attemptedPeople.length > 0 && (<PeopleDetails people={attemptedPeople} peopleCount={attemptedPeopleCount} />)}
+                    {attemptedPeople.length > 0 && (<PeopleDetails people={attemptedPeople} peopleCount={attemptedPeopleCount} isDesktop={isDesktop} />)}
                 </div>
             </div>
         </div>

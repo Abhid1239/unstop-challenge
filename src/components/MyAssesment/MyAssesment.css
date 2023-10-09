@@ -49,8 +49,14 @@
   }
 }
 
-@media screen and (width >= 960px) {
+@media screen and (width >= 1100px) {
   .my-asses__info {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (width >= 1400px) {
+  .my-asses__info {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

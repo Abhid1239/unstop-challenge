@@ -64,6 +64,10 @@
 }
 
 @media screen and (width >= 900px) {
+  .main__page {
+    display: flex;
+  }
+
   .asses-page__header {
     height: 70px;
     display: flex;
