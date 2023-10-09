@@ -1,0 +1,17 @@
+.popup__wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transform: translateY(-100%);
+}
+
+.popup__header {
+  display: flex;
+}
+
+.popup__cross-color {
+  fill: var(--staus-important);
+}

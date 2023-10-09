@@ -102,7 +102,6 @@ const PeopleDetails = ({ people = [], peopleCount = 0, isDesktop }) => {
         </p>)
     }
     return peopleInfo;
-
 }
 
 function AssesmentCard({ assesmentData, key = "abcx", isDesktop }) {

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import { ReactComponent as NavIcon } from './../../assets/svg/nav.svg'
 import { ReactComponent as DesktopIcon } from './../../assets/svg/desktop.svg'
 import Navigation from '../../components/Navigation/Navigation';
+import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
 
 
 function AssesmentPage({ isDesktop }) {
@@ -13,6 +14,9 @@ function AssesmentPage({ isDesktop }) {
         <div className='assesment__page'>
             <div className='asses-page__nav-section'>
                 <Navigation />
+            </div>
+            <div className='asses-page__new-asses-popup'>
+                <NewAssesmentForm />
             </div>
             <div className="asses-page__header">
                 <div className="asses-page__nav">
