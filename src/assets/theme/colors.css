@@ -36,4 +36,6 @@ span {
 
 * {
   box-sizing: border-box;
+  font-family: "Inter", sans-serif !important;
+  color: var(--color-primary);
 }
