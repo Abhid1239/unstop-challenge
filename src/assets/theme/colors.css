@@ -17,6 +17,7 @@
   --background-primary: #f6f8fa;
   --background-secondary: #f2f8fe;
   --background-shadow: #1e1d1d9c;
+  --background-primary-light: #ddedff;
 }
 html {
   /* background: var(--color-surface);
