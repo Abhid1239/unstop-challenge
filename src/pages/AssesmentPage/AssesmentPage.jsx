@@ -10,17 +10,35 @@ import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
 
 
 function AssesmentPage({ isDesktop }) {
+    const [addNewAssesment, setAddNewAssesment] = useState(false);
+    const [showNavigation, setShowNavigation] = useState(false);
+
+    const handleCloseClick = () => {
+        setAddNewAssesment(false)
+    }
+
+    const handleAddNewAssesmentClick = () => {
+        setAddNewAssesment(true)
+    }
+
+    const handleNavgationClick = () => {
+        setShowNavigation(true);
+    }
+
+    const handleNavCloseClick = () => {
+        setShowNavigation(false)
+    }
     return (
         <div className='assesment__page'>
             <div className='asses-page__nav-section'>
-                <Navigation />
+                <Navigation isActive={showNavigation} onCloseClick={handleNavCloseClick} isDesktop={false} />
             </div>
             <div className='asses-page__new-asses-popup'>
-                <NewAssesmentForm />
+                <NewAssesmentForm isOpen={addNewAssesment} onCloseClick={handleCloseClick} />
             </div>
             <div className="asses-page__header">
                 <div className="asses-page__nav">
-                    <NavIcon />
+                    <NavIcon onClick={handleNavgationClick} />
                 </div>
                 <h1 className="asses-page__heading">Assesment</h1>
                 <div className="asses-page__switch">
@@ -31,7 +49,7 @@ function AssesmentPage({ isDesktop }) {
                 <div className="asses-page__my-asses active">My Assesments</div>
                 <div className="asses-page__unstop-asses">Unstop Assements</div>
             </div>
-            <MyAssesment isDesktop={isDesktop} />
+            <MyAssesment isDesktop={isDesktop} onAddNewAssesmentClick={handleAddNewAssesmentClick} />
         </div>
     )
 }

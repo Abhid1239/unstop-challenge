@@ -1,11 +1,23 @@
+.assesment-overview__wapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+  flex-shrink: 0;
+}
+
+.assesment-overview__wapper.active {
+  max-height: 100%;
+}
+
 .overview__wrapper {
   border: 1px solid var(--border-color-primary);
   border-radius: 12px;
   display: flex;
   gap: 1px;
   flex-direction: column;
-  overflow: hidden;
+  margin-bottom: 15px;
 }
+
 .overview__container {
   padding: 10px 14px;
   display: flex;

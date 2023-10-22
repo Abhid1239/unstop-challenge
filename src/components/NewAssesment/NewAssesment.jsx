@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { ReactComponent as PlusIcon } from './../../assets/svg/plus.svg';
 import './NewAssesment.css'
 
-function NewAssesment(props) {
+function NewAssesment({ onClick }) {
     return (
-        <div className='new-asses__new-wrapper'>
+        <div className='new-asses__new-wrapper' onClick={onClick}>
             <div className='new-asses__new-add'>
                 <PlusIcon />
             </div>

@@ -6,16 +6,29 @@ import PropTypes from 'prop-types'
 import { ReactComponent as NavIcon } from './../../assets/svg/nav.svg'
 import { ReactComponent as DividerIcon } from './../../assets/svg/divider.svg'
 import { ReactComponent as DesktopIcon } from './../../assets/svg/desktop.svg'
+import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
 import Navigation from '../../components/Navigation/Navigation';
 
 
 function AssesmentPageDesktop({ isDesktop }) {
+    const [addNewAssesment, setAddNewAssesment] = useState(false);
+
+
+    const handleAddNewAssesmentClick = () => {
+        setAddNewAssesment(true)
+    }
+    const handleCloseClick = () => {
+        setAddNewAssesment(false)
+    }
 
 
     return (
         <>
             <div className='main__page'>
-                <Navigation isDesktop={isDesktop} />
+                <div className='asses-page__new-asses-popup'>
+                    <NewAssesmentForm isOpen={addNewAssesment} onCloseClick={handleCloseClick} />
+                </div>
+                <Navigation isDesktop={isDesktop} isActive={true} />
                 <div className='assesment__page'>
                     <div className="asses-page__header">
                         <h1 className="asses-page__heading">Assesment</h1>
@@ -28,7 +41,7 @@ function AssesmentPageDesktop({ isDesktop }) {
                             <DesktopIcon />
                         </div>
                     </div>
-                    <MyAssesment isDesktop={isDesktop} />
+                    <MyAssesment isDesktop={isDesktop} onAddNewAssesmentClick={handleAddNewAssesmentClick} />
                 </div>
             </div>
         </>

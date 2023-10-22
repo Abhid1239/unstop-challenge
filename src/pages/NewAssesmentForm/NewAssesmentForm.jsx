@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import './NewAssesmentForm.css';
 import { ReactComponent as CrossIcon } from './../../assets/svg/cross.svg'
-function NewAssesmentForm(props) {
-    const [hidePopup, setHidePopup] = useState(false)
+function NewAssesmentForm({ isOpen = false, onCloseClick }) {
     return (
-        <div className={`popup__wrapper ${hidePopup ? 'hidePopup' : ''}`}>
+        <div className={`popup__wrapper ${!isOpen ? 'hidePopup' : ''}`}>
             <div className="popup__header">
                 <p className="popup__heading">Sub-Section Details</p>
-                <div className='popup__cross-btn' onClick={() => { setHidePopup(!hidePopup) }}>
+                <div className='popup__cross-btn' onClick={() => { onCloseClick && onCloseClick() }}>
                     <CrossIcon className='popup__cross-color' />
                 </div>
             </div>
@@ -44,7 +43,7 @@ function NewAssesmentForm(props) {
                 <input className='new-form__input' type='number' id='assesment-duration' placeholder='Eg. 90 minutes' />
             </form>
             <div className="popup__footer">
-                <div className='popup__submit-btn ' onClick={() => { setHidePopup(!hidePopup) }}>Submit</div>
+                <div className='popup__submit-btn ' onClick={() => { onCloseClick && onCloseClick() }}>Submit</div>
             </div>
         </div>
     )

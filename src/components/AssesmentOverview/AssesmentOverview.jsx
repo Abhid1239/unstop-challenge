@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import AssesmentCard from "./../AssesmentCard/AssesmentCard";
-import NewAssesment from "../NewAssesment/NewAssesment";
 import "./AssesmentOverview.css";
 import { ReactComponent as AgendaIcon } from "./../../assets/svg/agenda.svg";
 import { ReactComponent as LinkHorizontalIcon } from "./../../assets/svg/link_horizaontal.svg";
@@ -38,7 +36,7 @@ const defaultProps = {
 }
 
 
-function AssesmentOverview({ overviewData, isDesktop }) {
+function AssesmentOverview({ overviewData, isActive, isDesktop }) {
     const { id,
         totalAssesment,
         totalProposed,
@@ -58,8 +56,8 @@ function AssesmentOverview({ overviewData, isDesktop }) {
 
     } = overviewData
     return (
-        <div className="assesment-overview__wapper" key={id}>
-            <div className="overview__wrapper">
+        <div className={`assesment-overview__wapper ${isActive || isDesktop ? 'active' : ''}`} >
+            <div className="overview__wrapper" key={id}>
                 <div className="overview__first-section">
                     <div className={`overview__container ${isDesktop ? "" : "overview__total-wrapper"}`}>
                         <p className="overview__heading-text">Total Assessment</p>

@@ -8,14 +8,18 @@ import { ReactComponent as QuizIcon } from "./../../assets/svg/quiz.svg";
 import { ReactComponent as CrossIcon } from "./../../assets/svg/cross.svg";
 
 
-function Navigation({ isDesktop }) {
+function Navigation({ isDesktop = true, isActive = false, onCloseClick }) {
     return (
-        <div className="nav-wrapper__shadow">
-            <div className="nav__wrapper">
-                {!isDesktop && <div className="nav__control">
-                    <p className="nav__menu-text">Menu </p>
-                    <CrossIcon />
-                </div>}
+        <>
+            {!isDesktop && <div className={`nav-wrapper__shadow ${isActive ? 'active' : ''}`}>
+            </div >}
+            <div className={`nav__wrapper ${isActive ? 'active' : ''}`}>
+                {
+                    !isDesktop && <div className="nav__control">
+                        <p className="nav__menu-text">Menu </p>
+                        <CrossIcon onClick={onCloseClick} />
+                    </div>
+                }
                 <div className="nav__sec-one">
                     <div className="nav__section-wrapper">
                         <DashboardIcon />
@@ -42,8 +46,9 @@ function Navigation({ isDesktop }) {
                         </div>}
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+            {isDesktop && <div className={`nav-wrapper__shadow ${isActive ? 'active' : ''}`}></div>}
+        </>
     )
 }
 

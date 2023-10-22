@@ -3,13 +3,14 @@
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  /* gap: 15px; */
 }
 
 .my-asses__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .my-asses__text {
@@ -36,6 +37,7 @@
 @media screen and (width >= 900px) {
   .my-asses__overview {
     overflow: auto;
+    gap: 15px;
   }
   .my-asses__text {
     font-size: 18px;
