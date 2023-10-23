@@ -19,7 +19,8 @@
   --background-shadow: #1e1d1d9c;
   --background-primary-light: #ddedff;
 }
-html {
+html,
+body {
   /* background: var(--color-surface);
   color: var(--color-solid); */
   color: var(--color-primary);

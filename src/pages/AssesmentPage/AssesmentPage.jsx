@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MyAssesment from '../../components/MyAssesment/MyAssesment';
 import './AssesmentPage.css';
 import PropTypes from 'prop-types'
@@ -12,6 +12,7 @@ import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
 function AssesmentPage({ isDesktop, onDesktopIconClick }) {
     const [addNewAssesment, setAddNewAssesment] = useState(false);
     const [showNavigation, setShowNavigation] = useState(false);
+    const [wrapperheight, setWrapperHeight] = useState(`${window.innerHeight}px`);
 
     const handleCloseClick = () => {
         setAddNewAssesment(false)
@@ -28,8 +29,14 @@ function AssesmentPage({ isDesktop, onDesktopIconClick }) {
     const handleNavCloseClick = () => {
         setShowNavigation(false)
     }
+
+    useEffect(() => {
+        document.addEventListener('resize', () => {
+            setWrapperHeight(`${window.innerHeight}px`);
+        })
+    }, [])
     return (
-        <div className='assesment__page'>
+        <div className='assesment__page' style={{ height: wrapperheight }}>
             <div className='asses-page__nav-section'>
                 <Navigation isActive={showNavigation} onCloseClick={handleNavCloseClick} isDesktop={false} />
             </div>
