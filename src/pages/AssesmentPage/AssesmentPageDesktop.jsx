@@ -5,12 +5,12 @@ import './AssesmentPage.css';
 import PropTypes from 'prop-types'
 import { ReactComponent as NavIcon } from './../../assets/svg/nav.svg'
 import { ReactComponent as DividerIcon } from './../../assets/svg/divider.svg'
-import { ReactComponent as DesktopIcon } from './../../assets/svg/desktop.svg'
+import { ReactComponent as MobileIcon } from './../../assets/svg/mobile.svg'
 import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
 import Navigation from '../../components/Navigation/Navigation';
 
 
-function AssesmentPageDesktop({ isDesktop }) {
+function AssesmentPageDesktop({ isDesktop, onMsiteIconClick }) {
     const [addNewAssesment, setAddNewAssesment] = useState(false);
 
 
@@ -37,8 +37,8 @@ function AssesmentPageDesktop({ isDesktop }) {
                             <div className="asses-page__my-asses active">My Assesments</div>
                             <div className="asses-page__unstop-asses">Unstop Assements</div>
                         </div>
-                        <div className="asses-page__switch">
-                            <DesktopIcon />
+                        <div className="asses-page__switch" onClick={onMsiteIconClick}>
+                            <MobileIcon />
                         </div>
                     </div>
                     <MyAssesment isDesktop={isDesktop} onAddNewAssesmentClick={handleAddNewAssesmentClick} />

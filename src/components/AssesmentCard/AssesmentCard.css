@@ -3,6 +3,7 @@
   border-radius: 12px;
   padding: 14px;
   min-width: 300px;
+  cursor: pointer;
 }
 
 .card__info,

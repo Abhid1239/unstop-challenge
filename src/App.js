@@ -5,6 +5,17 @@ import AssesmentPageDesktop from './pages/AssesmentPage/AssesmentPageDesktop';
 function App() {
   const [isDesktop, setIsDesktop] = useState(false)
 
+  const handleDesktopIconClick = () => {
+    if (!isDesktop) {
+      alert("Please increase your screen width to more than 900px ")
+    }
+  }
+  const handleMsiteIconClick = () => {
+    if (isDesktop) {
+      alert("Please reduce your screen size to less then 900px ")
+
+    }
+  }
   function handleWindowResize() {
     const resolution = window.innerWidth;
     setIsDesktop(resolution >= 900)
@@ -22,8 +33,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {!isDesktop ? <AssesmentPage isDesktop={isDesktop} /> :
-        <AssesmentPageDesktop isDesktop={isDesktop} />}
+      {!isDesktop ? <AssesmentPage isDesktop={isDesktop} onDesktopIconClick={handleDesktopIconClick} /> :
+        <AssesmentPageDesktop isDesktop={isDesktop} onMsiteIconClick={handleMsiteIconClick} />}
     </div>
   );
 }

@@ -5,9 +5,10 @@
   align-items: center;
   padding: 20px 30px;
   background-color: var(--background-primary);
-  border: 1px solid var(--border-color-primary);
+  border: 1px dashed var(--border-color-primary);
   border-radius: 12px;
   min-width: 300px;
+  cursor: pointer;
 }
 .new-asses__new-add {
   width: 50px;

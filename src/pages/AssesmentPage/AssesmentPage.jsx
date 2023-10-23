@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import AssesmentOverview from '../../components/AssesmentOverview/AssesmentOverview'
+import React, { useState } from 'react'
 import MyAssesment from '../../components/MyAssesment/MyAssesment';
 import './AssesmentPage.css';
 import PropTypes from 'prop-types'
 import { ReactComponent as NavIcon } from './../../assets/svg/nav.svg'
 import { ReactComponent as DesktopIcon } from './../../assets/svg/desktop.svg'
+import { ReactComponent as PlusIcon } from './../../assets/svg/plus.svg'
 import Navigation from '../../components/Navigation/Navigation';
 import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
 
 
-function AssesmentPage({ isDesktop }) {
+function AssesmentPage({ isDesktop, onDesktopIconClick }) {
     const [addNewAssesment, setAddNewAssesment] = useState(false);
     const [showNavigation, setShowNavigation] = useState(false);
 
@@ -36,13 +36,16 @@ function AssesmentPage({ isDesktop }) {
             <div className='asses-page__new-asses-popup'>
                 <NewAssesmentForm isOpen={addNewAssesment} onCloseClick={handleCloseClick} />
             </div>
+            <div className='asses-page__add-new-asses' onClick={handleAddNewAssesmentClick}>
+                <PlusIcon className='add-new-asses__icon' />
+            </div>
             <div className="asses-page__header">
                 <div className="asses-page__nav">
                     <NavIcon onClick={handleNavgationClick} />
                 </div>
                 <h1 className="asses-page__heading">Assesment</h1>
                 <div className="asses-page__switch">
-                    <DesktopIcon />
+                    <DesktopIcon onClick={onDesktopIconClick} />
                 </div>
             </div>
             <div className="asses-page__tabs">

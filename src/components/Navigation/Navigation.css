@@ -63,6 +63,7 @@
   border: 1px solid transparent;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .nav__section-wrapper--tag {

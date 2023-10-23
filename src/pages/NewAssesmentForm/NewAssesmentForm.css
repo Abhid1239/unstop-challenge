@@ -35,6 +35,7 @@
   padding: 5px;
   border-radius: 100%;
   background-color: var(--staus-important-light);
+  cursor: pointer;
 }
 
 .popup__cross-color {
@@ -48,7 +49,12 @@
   display: flex;
   flex-direction: column;
   padding: 16px 15px;
+  margin-bottom: auto;
   /* gap: 20px; */
+}
+
+.popup__content .new-form__input:last-child {
+  margin: 0;
 }
 
 .new-form__label {
@@ -110,7 +116,6 @@
 }
 
 .popup__footer {
-  position: absolute;
   inset: auto 0 0;
   padding: 10px 15px;
   border-top: 1px solid var(--border-color-primary);
@@ -127,6 +132,7 @@
   font-weight: 600;
   color: white;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 @media screen and (width >= 900px) {
