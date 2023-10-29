@@ -3,7 +3,6 @@ import AssesmentOverview from '../../components/AssesmentOverview/AssesmentOverv
 import MyAssesment from '../../components/MyAssesment/MyAssesment';
 import './AssesmentPage.css';
 import PropTypes from 'prop-types'
-import { ReactComponent as NavIcon } from './../../assets/svg/nav.svg'
 import { ReactComponent as DividerIcon } from './../../assets/svg/divider.svg'
 import { ReactComponent as MobileIcon } from './../../assets/svg/mobile.svg'
 import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';

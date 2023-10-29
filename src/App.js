@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './assets/theme/colors.css'
+import { useResizeHook } from './hooks/useResizeHook';
 import AssesmentPage from './pages/AssesmentPage/AssesmentPage';
 import AssesmentPageDesktop from './pages/AssesmentPage/AssesmentPageDesktop';
 function App() {
-  const [isDesktop, setIsDesktop] = useState(false)
+  const [windowWidth,] = useResizeHook();
+  const isDesktop = windowWidth >= 900;
 
   const handleDesktopIconClick = () => {
     if (!isDesktop) {
@@ -16,21 +18,6 @@ function App() {
 
     }
   }
-  function handleWindowResize() {
-    const resolution = window.innerWidth;
-    setIsDesktop(resolution >= 900)
-  }
-  useEffect(() => {
-    handleWindowResize();
-
-    // Listen for the resize event and attach the event listener
-    window.addEventListener("resize", handleWindowResize);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
   return (
     <div className="App">
       {!isDesktop ? <AssesmentPage isDesktop={isDesktop} onDesktopIconClick={handleDesktopIconClick} /> :
