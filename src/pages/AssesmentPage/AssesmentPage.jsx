@@ -7,38 +7,27 @@ import { ReactComponent as DesktopIcon } from './../../assets/svg/desktop.svg'
 import { ReactComponent as PlusIcon } from './../../assets/svg/plus.svg'
 import Navigation from '../../components/Navigation/Navigation';
 import NewAssesmentForm from '../NewAssesmentForm/NewAssesmentForm';
+import { useResizeHook } from '../../hooks/useResizeHook';
 
 
 function AssesmentPage({ isDesktop, onDesktopIconClick }) {
     const [addNewAssesment, setAddNewAssesment] = useState(false);
     const [showNavigation, setShowNavigation] = useState(false);
-    const [wrapperheight, setWrapperHeight] = useState(`${window.innerHeight}px`);
-
-    const handleCloseClick = () => {
-        setAddNewAssesment(false)
-    }
+    const { windowHeight } = useResizeHook();
 
     const handleAddNewAssesmentClick = () => {
-        setAddNewAssesment(true)
+        setAddNewAssesment(!addNewAssesment)
     }
 
     const handleNavgationClick = () => {
-        setShowNavigation(true);
+        setShowNavigation(!showNavigation);
     }
 
-    const handleNavCloseClick = () => {
-        setShowNavigation(false)
-    }
 
-    useEffect(() => {
-        document.addEventListener('resize', () => {
-            setWrapperHeight(`${window.innerHeight}px`);
-        })
-    }, [])
     return (
-        <div className='assesment__page' style={{ height: wrapperheight }}>
+        <div className='assesment__page' style={{ height: `${windowHeight}` }}>
             <div className='asses-page__nav-section'>
-                <Navigation isActive={showNavigation} onCloseClick={handleNavCloseClick} isDesktop={false} />
+                <Navigation isActive={showNavigation} onCloseClick={handleNavgationClick} isDesktop={false} />
             </div>
             <div className='asses-page__new-asses-popup'>
                 <NewAssesmentForm isOpen={addNewAssesment} onCloseClick={handleCloseClick} />

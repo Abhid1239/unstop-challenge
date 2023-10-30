@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-
 export const useResizeHook = () => {
     const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-    const [windowWidth, setWindowWidth] = useState(window.innerHeight);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     function handleWindowResize() {
         setWindowHeight(window.innerHeight)
@@ -12,7 +11,6 @@ export const useResizeHook = () => {
 
     useEffect(() => {
         handleWindowResize();
-
         // Listen for the resize event and attach the event listener
         window.addEventListener("resize", handleWindowResize);
 
@@ -22,5 +20,5 @@ export const useResizeHook = () => {
         };
     }, []);
 
-    return [windowHeight, windowWidth];
+    return { windowWidth: windowWidth, windowHeight: windowHeight };
 };
