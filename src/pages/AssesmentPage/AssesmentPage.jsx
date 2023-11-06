@@ -30,7 +30,7 @@ function AssesmentPage({ isDesktop, onDesktopIconClick }) {
                 <Navigation isActive={showNavigation} onCloseClick={handleNavgationClick} isDesktop={false} />
             </div>
             <div className='asses-page__new-asses-popup'>
-                <NewAssesmentForm isOpen={addNewAssesment} onCloseClick={handleCloseClick} />
+                <NewAssesmentForm isOpen={addNewAssesment} onCloseClick={handleAddNewAssesmentClick} />
             </div>
             <div className='asses-page__add-new-asses' onClick={handleAddNewAssesmentClick}>
                 <PlusIcon className='add-new-asses__icon' />
